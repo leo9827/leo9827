@@ -11,13 +11,12 @@ const MoreStories = ({posts}: Props) => {
       <h4 className="mb-4 text-3xl md:text-3xl font-bold tracking-tighter leading-tight">
         More Posts
       </h4>
-      <div className="gap-y-20 md:gap-y-32 mb-32">
+      <div className="gap-y-10 md:gap-y-10 mb-10">
         {posts.map((post) => (
           <PostPreview
             key={post.slug}
             title={post.title}
             date={post.date}
-            author={post.author}
             slug={post.slug}
             excerpt={post.excerpt}
           />

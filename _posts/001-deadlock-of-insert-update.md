@@ -1,6 +1,6 @@
 ---
 title: 'Deadlock case of insert and update'
-excerpt: 'I find a deadlock case of update after other transaction execute insert'
+excerpt: 'I find a deadlock case of update...'
 date: '2023-12-06T05:35:07.322Z'
 ---
   

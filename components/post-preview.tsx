@@ -1,12 +1,10 @@
 import DateFormatter from './date-formatter'
 import Link from 'next/link'
-import type Author from '../interfaces/author'
 
 type Props = {
   title: string
   date: string
   excerpt: string
-  author: Author
   slug: string
 }
 
@@ -14,12 +12,11 @@ const PostPreview = ({
   title,
   date,
   excerpt,
-  author,
   slug,
 }: Props) => {
   return (
     <div>
-      <h3 className="text-2xl mb-3 leading-snug">
+      <h3 className="text-xl mb-2 leading-snug">
         <Link
           as={`/posts/${slug}`}
           href="/posts/[slug]"
@@ -28,10 +25,10 @@ const PostPreview = ({
           {title}
         </Link>
       </h3>
-      <div className="text-xs mb-2">
+      <div className="text-sm mb-1 mt-1 text-gray-500">
         <DateFormatter dateString={date} />
       </div>
-      <p className="text-lg leading-relaxed mb-2">{excerpt}</p>
+      <p className="text-base leading-relaxed mb-2">{excerpt}</p>
     </div>
   )
 }
